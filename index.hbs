@@ -1,0 +1,163 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+<main>
+      <section  class="box-1">
+        <div >
+          <div class="box-1-part">
+            <div class="box-1-p">
+              <img src={{asset "images/main-site/aave.png"}} alt="" />
+              <div>
+                <h1 class="box-1-heading">defi masterclass</h1>
+                <p class="box-1-para">your guide to web3 defi</p>
+              </div>
+          </div>
+
+          <div class="box-2">
+              <div class="box-2-part">
+                <img src={{asset "images/main-site/IMG_0039.png"}} alt="" />
+                <h1 class="box-2-btn">Book an appointment</h1>
+              </div>
+              <div class="box-2-part">
+                <img src={{asset "images/main-site/IMG_0040.png"}} alt="" />
+                <h1 class="box-2-btn">Sign up for our course</h1>
+              </div>
+              <div class="box-2-part b">
+                <img src={{asset "images/main-site/IMG_0041.png"}} alt="" />
+                <h1 class="box-2-btn">Subscribe to my youtube channel</h1>
+              </div>
+            </div>
+        </div>
+
+
+      </section>
+
+      <section>
+        <div class="box-3">
+          <h1 class="box-3-heading heading">this week in defi masterClass</h1>
+          <div class="box-3-part cards">
+            {{#get "posts" limit="3" filter="tags:[new]" as |new_posts| }}
+              {{#foreach new_posts}}
+                <a href="{{url}}" target="_blank" rel="noopener noreferrer">
+                  <div class="cards__item">
+                    <div class="box-3-card">
+                      <img
+                        src={{img_url feature_image}}
+                        alt=""
+                      />
+                      <h2>{{title}}</h2>
+                      <p>
+                        {{excerpt}}
+                        {{!-- <span>read-more</span> --}}
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              {{/foreach}}
+            {{/get}}         
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="box-4">
+          <h1>Best Of Defi MasterClass</h1>
+          <div class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                {{#get "posts" filter="tags:[best-of-masterclass]" as |best_posts| }}
+                  {{#foreach best_posts}}
+                    <li class="splide__slide">
+                      <a href="">
+                        <div class="box-4-card">
+                          <img
+                            src={{img_url feature_image}}
+                            alt=""
+                          />
+                          <h2>{{title}}</h2>
+                          <p>
+                            {{excerpt}}
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                  {{/foreach}}
+                {{/get}}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="box-5">
+          <h1>What Do You Want To Do ?</h1>
+          <div class="box-5-part">
+            <div class="box-5-part-1">
+              <a href="">
+                <div class="box-5-inside option-box">
+                  <h2>Yield Farms of the Week</h2>
+                </div>
+              </a>
+              <a href="">
+                <div class="box-5-inside option-box">
+                  <h2>Best Way to Borrow USD</h2>
+                </div>
+              </a>
+            </div>
+            <div class="box-5-part-1">
+              <a href="">
+                <div class="box-5-inside option-box">
+                  <h2>Best Landing Rates in Defi</h2>
+                </div>
+              </a>
+              <a href="">
+                <div class="box-5-inside option-box">
+                  <h2>Become an LP and get 40% APY</h2>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="box-5">
+          <h1>Find Your Favourite Protocol</h1>
+          <div class="box-5-part">
+            <div class="box-5-part-1">
+              <a href="/aave">
+                <div class="box-5-inside option-box">
+                  <img src={{asset "images/aave.svg"}} alt="" />
+                  <h2>Aave Guides And Reports</h2>
+                </div>
+              </a>
+              <a href="/abracadabra">
+                <div class="box-5-inside option-box">
+                  <img src={{asset "images/Wizard.png"}} class="sp-img" alt="" />
+                  <h2>Best of Abracadabra Money</h2>
+                </div>
+              </a>
+            </div>
+            <div class="box-5-part-1">
+              <a href="/uniswap">
+                <div class="box-5-inside option-box">
+                  <img src={{asset "images/uniswap.svg"}} alt="" />
+                  <h2>Uniswap V2 Full Guide</h2>
+                </div>
+              </a>
+              <a href="/wonderland">
+                <div class="box-5-inside option-box">
+                  <img src={{asset "images/Wonderland.png"}} class="sp-img" alt="" />
+                  <h2>Wonderland.Money $TIME</h2>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+</main>   
+
+

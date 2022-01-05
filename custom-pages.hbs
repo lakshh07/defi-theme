@@ -1,0 +1,134 @@
+{{!< default}}
+
+{{#post}}
+
+<section class="p-section">
+    <div class="p-box-1">
+      <h1 id="main-title">{{title}}</h1>
+    </div>
+    <div class="p-box-big">
+      <div class="p-box-2">
+        <div class="p-box">
+          <h2>Key Stats</h2>
+          <table>
+            <tr>
+              <td>Current Price</td>
+              <td class="current-price">$0</td>
+            </tr>
+            <tr>
+              <td>Market Cap</td>
+              <td class="market-cap">$0</td>
+            </tr>
+            <tr>
+              <td>Total Value Locked</td>
+            </tr>
+            <tr>
+              <td>in USD</td>
+              <td class="tvl-in-usd">$0</td>
+            </tr>
+            <tr>
+              <td>in BTC</td>
+              <td class="tvl-in-btc">0</td>
+            </tr>
+            <tr>
+              <td>Blockchain</td>
+              <td class="blockchain-name">-</td>
+            </tr>
+            <tr>
+              <td>Symbol</td>
+              <td class="symbol">-</td>
+            </tr>
+          </table>
+        </div>
+        <div class="p-box-3-part p-box">
+          <h2>Ecosystem Links</h2>
+          <ul>
+            <li id="discord-name"><a class="discord-name" href="">Discord</a></li>
+            <li id="github-name"><a class="github-name" href="">Github</a></li>
+            <li id="twitter-name"><a class="twitter-name" href="">Twitter</a></li>
+            <li id="telegram-name"><a class="telegram-name" href="">Telegram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="p-box-3">
+        <div class="p-box-2-part p-box">
+          <div class="">
+            <img id="protocol-img" src="" alt="" />
+          </div>
+        </div>
+        <div class="p-box-3-part-2">
+          {{content}}
+        </div>
+      </div>
+    </div>
+</section>
+<script>
+  const x = document.getElementById("main-title").textContent;
+  async function getapi(url) {
+  const response = await fetch(url);
+  let data = await response.json();
+  console.log(data);
+
+  Object.keys(data.platforms).length > 1
+    ? (document.querySelector(".blockchain-name").innerHTML = "Multichain")
+    : (document.querySelector(".blockchain-name").innerHTML = "Singlechain");
+
+  data.links.chat_url[0]
+    ? (document.querySelector(".discord-name").href = data.links.chat_url[0])
+    : (document.getElementById("discord-name").style.display = "none");
+
+  data.links.telegram_channel_identifier
+    ? (document.querySelector(
+        ".telegram-name"
+      ).href = `https://t.me/${data.links.telegram_channel_identifier}`)
+    : (document.getElementById("telegram-name").style.display = "none");
+
+  data.links.twitter_screen_name
+    ? (document.querySelector(
+        ".twitter-name"
+      ).href = `https://twitter.com/${data.links.twitter_screen_name}`)
+    : (document.getElementById("twitter-name").style.display = "none");
+
+  data.links.repos_url.github[0]
+    ? (document.querySelector(".github-name").href =
+        data.links.repos_url.github[0])
+    : (document.getElementById("github-name").style.display = "none");
+
+  // document.querySelector(".homepage-url").innerHTML = data.links.homepage[0];
+  document.getElementById("protocol-img").src = data.image.large;
+  document.querySelector(
+    ".current-price"
+  ).innerHTML = `$${data.market_data.current_price.usd.toLocaleString("en-US")}`;
+  document.querySelector(
+    ".market-cap"
+  ).innerHTML = `$${data.market_data.market_cap.usd.toLocaleString("en-US")}`;
+  document.querySelector(
+    ".tvl-in-usd"
+  ).innerHTML = `$${data.market_data.total_value_locked.usd.toLocaleString(
+    "en-US"
+  )}`;
+  document.querySelector(
+    ".tvl-in-btc"
+  ).innerHTML = `${data.market_data.total_value_locked.btc.toLocaleString(
+    "en-US"
+  )} BTC`;
+  document.querySelector(".symbol").innerHTML = data.symbol;
+
+  console.log("Image", data.image.large);
+  console.log("Discord", data.links.chat_url[0]);
+  console.log("Telegram", data.links.telegram_channel_identifier);
+  console.log("Twitter", data.links.twitter_screen_name);
+  console.log("market Cap", data.market_data.market_cap.usd);
+  console.log("tvl in usd", data.market_data.total_value_locked.usd);
+  console.log("tvl in btc", data.market_data.total_value_locked.btc);
+  console.log("current price", data.market_data.current_price.usd);
+  console.log("symbol", data.symbol);
+  console.log("github", data.links.repos_url.github[0]);
+  console.log("homepage", data.links.homepage[0]);
+  console.log(Object.keys(data.platforms).length);
+  console.log(data.platforms);
+}
+  getapi(`https://api.coingecko.com/api/v3/coins/${x.toLowerCase()}`);
+</script>
+{{/post}}
