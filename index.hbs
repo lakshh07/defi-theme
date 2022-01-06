@@ -36,7 +36,7 @@ into the {body} of the default.hbs template --}}
         <div class="box-3">
           <h1 class="box-3-heading heading">this week in defi masterClass</h1>
           <div class="box-3-part cards">
-            {{#get "posts" limit="3" filter="tags:[new]" as |new_posts| }}
+            {{#get "posts" limit="2" filter="tags:[new]" as |new_posts| }}
               {{#foreach new_posts}}
                 <a href="{{url}}" target="_blank" rel="noopener noreferrer">
                   <div class="cards__item">
@@ -60,7 +60,7 @@ into the {body} of the default.hbs template --}}
         </div>
       </section>
 
-      <section>
+      {{!-- <section>
         <div class="box-4">
           <h1>Best Of Defi MasterClass</h1>
           <div class="splide">
@@ -88,9 +88,9 @@ into the {body} of the default.hbs template --}}
             </div>
           </div>
         </div>
-      </section>
+      </section> --}}
 
-      <section>
+      {{!-- <section>
         <div class="box-5">
           <h1>What Do You Want To Do ?</h1>
           <div class="box-5-part">
@@ -120,11 +120,23 @@ into the {body} of the default.hbs template --}}
             </div>
           </div>
         </div>
+      </section> --}}
+
+      <section>
+        <div class="box-7">
+          <h1>Download the crypto investment guide e-book</h1>
+          <div class="box-7-part">
+            <form action="">
+              <input placeholder="Youremail@example.com" type="email" />
+              <button class="box-2-btn btn2">Get Now</button>
+            </form>
+          </div>
+        </div>
       </section>
 
       <section>
         <div class="box-5">
-          <h1>Find Your Favourite Protocol</h1>
+          <h1>Best Defi Guides</h1>
           <div class="box-5-part">
             <div class="box-5-part-1">
               <a href="/aave">
@@ -153,6 +165,80 @@ into the {body} of the default.hbs template --}}
                   <h2>Wonderland.Money $TIME</h2>
                 </div>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="box-6">
+          <h1>Trending Videos</h1>
+          <div class="box-6-part">
+            <div class="box-6-b">
+              <iframe
+                 width="400"
+                height="222"
+                src="https://www.youtube.com/embed/wkxeKaiVdnM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="box-6-b">
+              <iframe
+                 width="400"
+                height="222"
+                src="https://www.youtube.com/embed/wkxeKaiVdnM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="box-6-b">
+              <iframe
+                width="400"
+                height="222"
+                src="https://www.youtube.com/embed/wkxeKaiVdnM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="box-6-b">
+              <iframe
+                width="400"
+                height="222"
+                src="https://www.youtube.com/embed/wkxeKaiVdnM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="box-6-b">
+              <iframe
+                 width="400"
+                height="222"
+                src="https://www.youtube.com/embed/wkxeKaiVdnM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="box-6-b">
+              <iframe
+                 width="400"
+                height="222"
+                src="https://www.youtube.com/embed/wkxeKaiVdnM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
         </div>

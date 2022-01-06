@@ -177,10 +177,13 @@ img {
 
 /* second section */
 .box-3 {
-  position: relative;
-  margin: 8rem 0 7rem;
+  display: flex;
+  margin: 10rem 0 5rem;
+  justify-content: center;
+  align-items: center;
 }
 .box-3-heading {
+  flex: 1;
   font-family: "Josefin Sans";
   font-size: 3em;
   text-align: center;
@@ -191,6 +194,7 @@ img {
 }
 .box-3-part {
   margin: 30px 0;
+  flex: 2;
 }
 .box-3-card,
 .box-4-card {
@@ -231,7 +235,7 @@ img {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   word-break: break-word;
-  font-family: "Source Code Pro", monospace;
+  font-family: "Josefin Sans";
 }
 
 /* third section */
@@ -281,15 +285,16 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .box-5-inside img {
-  width: 5%;
+  width: 8%;
   margin-right: 10px;
 }
-.sp-img {
+/* .sp-img {
   height: 40px;
   width: 40px !important;
-}
+} */
 .box-5-part {
   margin: 4rem auto;
   display: grid;
@@ -304,7 +309,7 @@ img {
   flex-direction: column;
 }
 .box-5-part-1 h2 {
-  font-family: "Source Code Pro";
+  font-family: "Josefin Sans";
   text-align: center;
   font-size: 24px;
   padding-top: 0.5em;
@@ -329,6 +334,76 @@ img {
   transform: translate3d(-0.25em, -0.25em, -10em);
   -webkit-box-shadow: 0.5em 0.5em 3px rgb(0 234 0 / 50%);
   box-shadow: 0.5em 0.5em 3px rgb(0 0 0 / 50%);
+}
+
+.box-6 {
+  margin: 7% 2%;
+}
+.box-6 h1 {
+  font-family: "Josefin Sans";
+  font-size: 3em;
+  text-align: center;
+  color: black;
+  /* padding-left: 5%; */
+  padding-bottom: 10px;
+  filter: drop-shadow(rgba(0, 0, 0, 0.6) 0px 5px 3px);
+}
+.box-6-part {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.box-6-b {
+  flex-basis: 20%;
+  margin: 20px;
+  padding: 0.5em;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  transition: background 1s ease-in;
+  box-shadow: 15px 15px 50px #d9d9d9, -15px -15px 30px #ffffff;
+}
+.box-6-b:hover {
+  position: relative;
+  top: -2px;
+}
+
+.box-7 {
+  padding: 5% 2em;
+  margin: 5% 0 7%;
+  background-image: url(../images/main-site/Navy-Grey.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box-7 h1 {
+  text-transform: capitalize;
+  font-family: "Josefin Sans";
+  font-size: 3em;
+  text-align: center;
+  color: black;
+  padding-bottom: 50px;
+  filter: drop-shadow(rgba(0, 0, 0, 0.6) 0px 5px 3px);
+}
+.box-7-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-7-part form {
+  position: relative;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 0.5em;
+  z-index: 2;
+}
+.box-7-part input[type="email"] {
+  box-shadow: none;
+  background-color: whitesmoke;
+}
+.box-7-part form button {
+  margin: 1em 1em 0.5em !important;
+  font-size: 16px;
+  padding: 8px 16px;
 }
 
 @media screen and (max-width: 768px) {
