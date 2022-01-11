@@ -290,7 +290,6 @@ img {
 .box-5-inside img {
   width: 150px;
   height: 150px;
-  margin-right: 10px;
 }
 /* .sp-img {
   height: 40px;
@@ -373,9 +372,10 @@ img {
 }
 .box-6-b iframe {
   margin-right: 0 !important;
-  margin-bottom: 3.2em !important;
   margin-top: 2em !important;
   /* margin: 20px; */
+  width: 440px;
+  height: 220px;
   padding: 0.5em;
   border-radius: 10px;
   background: linear-gradient(145deg, #e6e6e6, #ffffff);
@@ -474,9 +474,9 @@ img {
   .box-5-part-1 h2 {
     font-size: 18px;
   }
-  .sp-img {
-    height: 20px;
-    width: 20px !important;
+
+  .box-6-b iframe {
+    margin-left: 8.5em;
   }
 }
 @media screen and (max-width: 425px) {
@@ -538,6 +538,9 @@ img {
   .box-5-inside img {
     width: 12%;
     margin-right: 0px;
+  }
+  .box-6-b iframe {
+    margin-left: 0em;
   }
 }
 
