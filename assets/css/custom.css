@@ -288,7 +288,8 @@ img {
   flex-direction: column;
 }
 .box-5-inside img {
-  width: 8%;
+  width: 150px;
+  height: 150px;
   margin-right: 10px;
 }
 /* .sp-img {
@@ -297,6 +298,7 @@ img {
 } */
 .box-5-part {
   margin: 4rem auto;
+  /* display: flex; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -307,6 +309,9 @@ img {
 .box-5-part-1 {
   display: flex;
   flex-direction: column;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr; */
 }
 .box-5-part-1 h2 {
   font-family: "Josefin Sans";
@@ -319,25 +324,38 @@ img {
 }
 
 .option-box {
-  max-width: 550px;
-  margin: 0 1.5rem 1.5rem 0;
-  padding: 1rem 0rem;
+  /* max-width: 500px; */
+  margin: 0 1.5rem 2rem;
+  padding: 3rem 0rem;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   cursor: pointer;
-  border: 6px double black;
-  background-color: rgb(12, 123, 147, 0.2);
+  border-radius: 20px;
+  /* border: 6px double black; */
+  /* background-color: rgb(12, 123, 147, 0.2); */
 }
 .option-box:hover {
-  background-color: white;
+  background-color: whitesmoke;
   -webkit-transform: translate3d(-0.25em, -0.25em, -10em);
   transform: translate3d(-0.25em, -0.25em, -10em);
   -webkit-box-shadow: 0.5em 0.5em 3px rgb(0 234 0 / 50%);
   box-shadow: 0.5em 0.5em 3px rgb(0 0 0 / 50%);
 }
+.aave {
+  background-color: rgb(33, 170, 227, 0.4);
+}
+.wonderland {
+  background-color: rgb(101, 101, 101, 0.4);
+}
+.uniswap {
+  background-color: rgb(154, 150, 232, 0.4);
+}
+.abracadabra {
+  background-color: rgb(255, 191, 92, 0.4);
+}
 
 .box-6 {
-  margin: 7% 2%;
+  margin: 7% 4%;
 }
 .box-6 h1 {
   font-family: "Josefin Sans";
@@ -353,20 +371,21 @@ img {
   flex-wrap: wrap;
   justify-content: center;
 }
-.box-6-b {
-  flex-basis: 20%;
-  margin: 20px;
+.box-6-b iframe {
+  margin-right: 0 !important;
+  margin-bottom: 3.2em !important;
+  margin-top: 2em !important;
+  /* margin: 20px; */
   padding: 0.5em;
   border-radius: 10px;
   background: linear-gradient(145deg, #e6e6e6, #ffffff);
   transition: background 1s ease-in;
-  box-shadow: 15px 15px 50px #d9d9d9, -15px -15px 30px #ffffff;
+  /* box-shadow: 15px 15px 50px #d9d9d9, -15px -15px 30px #ffffff; */
 }
 .box-6-b:hover {
   position: relative;
   top: -2px;
 }
-
 .box-7 {
   padding: 5% 2em;
   margin: 5% 0 7%;
