@@ -2,6 +2,14 @@
   font-family: Anton;
   src: url(../fonts/Anton-Regular.ttf);
 }
+/* 
+section {
+  background: #9a96e8;
+  background: #ffbf5c;
+  background: #21aae3;
+  background: #ff7271;
+  background: #656565;
+} */
 
 /* global */
 a {
@@ -46,8 +54,8 @@ img {
     linear-gradient(to right, rgb(0, 40, 57) 0%, rgb(0, 40, 57) 100%) !important;
 }
 .box-1-part {
-  padding-top: 11rem;
-  padding-bottom: 90px;
+  padding-top: 10px;
+  padding-bottom: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,12 +64,12 @@ img {
 }
 .box-1-heading {
   text-transform: uppercase;
-  font-size: 92px;
+  font-size: 82px;
   font-family: "Josefin Sans";
   /* letter-spacing: 5px; */
   -webkit-text-stroke: 1px rgb(255, 255, 255);
   color: transparent;
-  filter: drop-shadow(rgba(255, 255, 255, 0.7) 0px 5px 3px);
+  filter: drop-shadow(rgba(255, 255, 255, 0.4) 0px 5px 3px);
 }
 .box-1-p {
   display: flex;
@@ -72,13 +80,12 @@ img {
   position: relative;
   top: -35px;
   width: 250px;
-  height: 250px;
   filter: drop-shadow(rgba(255, 255, 255, 0.7) 0px 5px 3px);
 }
 .box-1-para {
   font-family: "Josefin Sans";
   font-size: 28px;
-  text-align: center;
+  padding-left:50px;
   line-height: 34px;
   text-transform: capitalize;
   margin-top: -15px;
@@ -95,7 +102,7 @@ img {
   width: 90%;
   background-color: transparent;
   border-radius: 10px;
-  margin: -6% auto 0;
+  margin: -100px auto 0;
   padding: 20px 0;
   /* background-color: white; */
   z-index: 2;
@@ -105,22 +112,23 @@ img {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
 }
+.box-2-part .img-cont {
+  background:White;
+  border-radius: 50%;
+  padding: 20px;
+  border-top: 4px solid #ffbf5c;
+}
 .box-2-part img {
-  height: 130px;
   width: 130px;
-  filter: drop-shadow(rgba(0, 0, 0, 0.7) 0px 5px 3px);
 }
 .box-2-part {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  border-radius: 15px;
   margin: 0 1.2em;
   padding: 1em;
   z-index: 2;
-  background: linear-gradient(145deg, #e6e6e6, #ffffff);
-  box-shadow: 1px 1px 2px #bdbdbd, -1px -1px 2px #ffffff;
 }
 .box-2-part h1 {
   margin-top: 1.5em;
@@ -190,7 +198,6 @@ img {
   color: black;
   text-transform: capitalize;
   position: relative;
-  filter: drop-shadow(rgba(0, 0, 0, 0.6) 0px 5px 3px);
 }
 .box-3-part {
   margin: 30px 0;
@@ -387,9 +394,7 @@ img {
   top: -2px;
 }
 .box-7 {
-  padding: 5% 2em;
-  margin: 5% 0 7%;
-  background-image: url(../images/main-site/Navy-Grey.webp);
+  padding: 20px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -18,15 +18,15 @@ into the {body} of the default.hbs template --}}
 
         <div class="box-2">
           <div class="box-2-part">
-            <img src={{asset "images/main-site/IMG_0039.png"}} alt="" />
+            <div class="img-cont"><img src={{asset "images/main-site/IMG_0039.png"}} alt="" /></div>
             <button class="box-2-btn">Book an appointment</button>
           </div>
           <div class="box-2-part">
-            <img src={{asset "images/main-site/IMG_0040.png"}} alt="" />
+            <div class="img-cont"><img src={{asset "images/main-site/IMG_0040.png"}} alt="" /></div>
             <button class="box-2-btn">Sign up for our course</button>
           </div>
           <div class="box-2-part b">
-            <img src={{asset "images/main-site/IMG_0041.png"}} alt="" />
+            <div class="img-cont"><img src={{asset "images/main-site/IMG_0041.png"}} alt="" /></div>
             <button class="box-2-btn">Subscribe to my youtube channel</button>
           </div>
         </div>
@@ -59,69 +59,6 @@ into the {body} of the default.hbs template --}}
           </div>
         </div>
       </section>
-
-      {{!-- <section>
-        <div class="box-4">
-          <h1>Best Of Defi MasterClass</h1>
-          <div class="splide">
-            <div class="splide__track">
-              <ul class="splide__list">
-                {{#get "posts" filter="tags:[best-of-masterclass]" as |best_posts| }}
-                  {{#foreach best_posts}}
-                    <li class="splide__slide">
-                      <a href="">
-                        <div class="box-4-card">
-                          <img
-                            src={{img_url feature_image}}
-                            alt=""
-                          />
-                          <h2>{{title}}</h2>
-                          <p>
-                            {{excerpt}}
-                          </p>
-                        </div>
-                      </a>
-                    </li>
-                  {{/foreach}}
-                {{/get}}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section> --}}
-
-      {{!-- <section>
-        <div class="box-5">
-          <h1>What Do You Want To Do ?</h1>
-          <div class="box-5-part">
-            <div class="box-5-part-1">
-              <a href="">
-                <div class="box-5-inside option-box">
-                  <h2>Yield Farms of the Week</h2>
-                </div>
-              </a>
-              <a href="">
-                <div class="box-5-inside option-box">
-                  <h2>Best Way to Borrow USD</h2>
-                </div>
-              </a>
-            </div>
-            <div class="box-5-part-1">
-              <a href="">
-                <div class="box-5-inside option-box">
-                  <h2>Best Landing Rates in Defi</h2>
-                </div>
-              </a>
-              <a href="">
-                <div class="box-5-inside option-box">
-                  <h2>Become an LP and get 40% APY</h2>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section> --}}
-
       <section>
         <div class="box-7">
           <h1>Download the crypto investment guide e-book</h1>
